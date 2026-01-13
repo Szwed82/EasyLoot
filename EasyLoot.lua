@@ -337,6 +337,7 @@ function EasyLoot:HandleItem(name,explicit_only)
   end
 
   if explicit_only then return OFF,false,false
+	end
   -- now check more general things like zone items:
   if GetRealZoneText() == "Zul'Gurub" then
     if elem(zg_coin,name) then
@@ -966,3 +967,4 @@ local dropdown2 = CreateListsDropdown(EasyLootConfigFrame, "Greed Whitelist", Ea
 local dropdown3 = CreateListsDropdown(EasyLootConfigFrame, "Pass Whitelist", EasyLootDB.passlist, 120,365, lists_y-200, "Dropdown3Frame", "A list of items that will always be Passed, and not auto-looted.")
 
 end
+
